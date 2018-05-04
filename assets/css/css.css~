@@ -1,0 +1,43 @@
+*{
+}
+
+body {
+margin-top:100px;
+/*background-image:url(../img/blue_tile.png);
+*/
+}
+
+
+.formlogin{
+padding-top:50px;}
+
+.formlogin .logintextbox{
+background-image:url(../img/blue_tile.png);
+color:white;
+margin-bottom:5px;
+}
+
+p.info{color:#082842;}
+
+.LargeText{
+font-size:40px;
+margin-left:10px;
+color:#FFFFFF;
+
+}
+
+.rememberme{
+margin-left:0px;
+color:white;
+}
+.loginbuttonarea{
+margin-left:0px;
+}
+.loginbuttonarea button{
+width: 50%; 
+}
+p.main{
+color:black;
+font-size:20px;
+font-weight:bold;
+}

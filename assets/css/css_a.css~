@@ -1,0 +1,44 @@
+*{
+}
+
+body {
+margin-top:100px;
+/*background-image:url(../img/blue_tile.png);*/
+background-color:white;
+}
+
+.logo{
+background-image:url(../img/sma_s.png);
+}
+.formlogin{
+padding-top:50px;}
+
+.formlogin .logintextbox{
+background-image:url(../img/blue_tile.png);
+color:white;
+margin:10px;
+}
+
+p.info{color:#082842;}
+
+.LargeText{
+font-size:40px;
+margin-left:25px;
+color:#082842;
+
+}
+
+.rememberme{
+margin-left:30px;
+color:white;
+}
+.loginbuttonarea{
+margin-left:10px;
+}
+.loginbuttonarea button{
+width: 50%; 
+}
+p.main{
+color:#082842;
+font-size:30px;
+}
