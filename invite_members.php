@@ -13,9 +13,9 @@ if (!$conn) {
 //$_SESSION['groupid']= 1;
 $error_msg_email= array();
 $send_mail_status= true;
-$successful_invites= '';
-$failed_invites= '';
-$email_exist= '';
+$successful_invites= [];
+$failed_invites= [];
+$email_exist= [];
 $email_invalid= '';
 $err_msg= '';
 $values= '';
@@ -83,16 +83,17 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'submit_invite') {
 
 					$mail_status= sendRequestApproveMail($conn, $email, $invite_link, $subject, $title, $message, $smtp_array);
 					if($mail_status == 'success') {
-						$successful_invites[]= $email;
+						array_push($successful_invites, $email);
 						$success_count++;
 					}
 					elseif($mail_status == 'failure'){
-						$failed_invites[]= $email;
+						array_push($failed_invites, $email);
 						$failure_count++;
 					}
 				}
 				else {
-					$email_exist[]= $email;
+					array_push($email_exist, $email);
+					$failure_count++;
 				}
 
 			}

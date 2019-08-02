@@ -250,7 +250,7 @@ function sendRequestApproveMail($conn, $student_email, $confirmation_link, $subj
 //	}
 	
 	
-	$mail = new PHPMailer;
+	$mail = new PHPMailer(true);
 	$mail->isSMTP();
 	$email = $student_email;//'enenim2000@yahoo.com';
 	//$mail->SMTPDebug = 2; //comment out this code for ajax request to work
@@ -283,12 +283,20 @@ function sendRequestApproveMail($conn, $student_email, $confirmation_link, $subj
     </div>
 </div>';
 	$mail->AltBody = 'Student Mobile Assistant' . $subject;
-	
-	if($mail->send()) {
+	try{
+		$mail->send();
 		return "success";
-	}else{
-		return "failure";
 	}
+	catch(phpmailerException $e) {
+		echo 'Message: ' .$e->getMessage();
+		return 'Failed';
+	}
+
+	// if($mail->send()) {
+	// 	return "success";
+	// }else{
+	// 	return "failure";
+	// }
 }
 
 function checkEmailExists($conn, $email, $groupid) {

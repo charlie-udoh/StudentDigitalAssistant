@@ -80,7 +80,7 @@ mysqli_close($conn);
 
 $page_title= "Welcome to SDA";
 include ('header.php');
-include ('include/modals.php'); echo $username; echo $password;
+include ('include/modals.php');
 ?>
 
 

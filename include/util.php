@@ -18,8 +18,8 @@ $server_host= $_SERVER['HTTP_HOST'];
 
 //DATABASE CONFIGURATION
 defined("DB_HOST") ? null : define("DB_HOST", "127.0.0.1");
-defined("DB_USER") ? null : define("DB_USER", "root");
-defined("DB_PASSWORD") ? null : define("DB_PASSWORD", "nolongthing1992");
+defined("DB_USER") ? null : define("DB_USER", "phpuser");
+defined("DB_PASSWORD") ? null : define("DB_PASSWORD", "pa55w0rd@1");
 defined("DB_NAME") ? null : define("DB_NAME", "sda");
 
 
@@ -35,9 +35,9 @@ $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 //development email settings (localhost)
 $smtp_array= array(
-	'smtp_host' => "secure368.sgcpanel.com",
-	'smtp_username' => "automailer@oandsonsnetwork.com",
-	'smtp_password' => "automailer*123#",
+	'smtp_host' => "smtp.gmail.com",
+	'smtp_username' => "bluetagautomailer@gmail.com",
+	'smtp_password' => "pa55w0rd@1",
 	'smtp_port'=> "465"
 );
 
